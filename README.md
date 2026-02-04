@@ -1,0 +1,2 @@
+# AI-study-planner
+hackathon
