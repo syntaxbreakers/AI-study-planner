@@ -82,7 +82,7 @@ function Planner({ globalData }) {
   const generatePlan = async () => {
     setLoading(true);
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
       const prompt = `
   Act as "Aura," a high-energy, empathetic AI Academic Strategist. Your goal is to turn ${globalData.name}'s study journey for ${globalData.className} into a clear, gamified roadmap to success.
 
