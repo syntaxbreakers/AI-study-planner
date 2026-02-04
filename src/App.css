@@ -1,94 +1,161 @@
 * {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #353535;
-    background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background-color: #f4f7fa; /* Simple light gray/blue background */
+  min-height: 100vh;
+  padding: 20px;
+  color: #2d3748;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 .top {
-    color: #2c3e50;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  background-color: #4f46e5; /* Flat Indigo */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.upload, .result-area {
-    margin: 20px auto;
-    padding: 30px;
-    border: 2px solid #000000;
-    border-radius: 10px;
+.top h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-h2, h3 {
-    margin-bottom: 15px;
+.upload {
+  padding: 40px;
 }
 
-.form-group input, 
+.upload h2 {
+  color: #1a202c;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Increased gap for better spacing */
+}
+
+.field-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group h3 {
+  color: #4a5568;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
 .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    display: block;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
 }
 
-textarea {
-    height: 100px;
-    resize: vertical;
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: opacity 0.2s;
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
-button:hover {
-    opacity: 0.8;
+/* Extra Context Field Specific Style */
+.extra-context {
+  border-left: 4px solid #4f46e5;
+  padding-left: 15px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
 }
 
-button:disabled {
-    background-color: #888;
-    cursor: not-allowed;
+.submit-btn {
+  padding: 16px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
 }
 
-/* Markdown Styling */
+.submit-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Planner Page Styles */
+.result-area {
+  padding: 40px;
+}
+
 .markdown-output {
-    margin-top: 20px;
-    line-height: 1.6;
+  background: #ffffff;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  line-height: 1.7;
 }
 
-.markdown-output table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.markdown-output table th {
+  background: #64748b; /* Slate header */
+  color: white;
 }
 
-.markdown-output th, 
-.markdown-output td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: left;
+.refine-section {
+  background: #f8fafc;
+  padding: 30px;
+  border-top: 1px solid #e2e8f0;
 }
 
-.markdown-output h1, 
-.markdown-output h2, 
-.markdown-output h3 {
-    margin-top: 20px;
+.btn-group button {
+  background-color: #4f46e5;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.alt-btn {
+  background-color: #ec4899 !important; /* Flat Pink */
+}
+
+.back-btn {
+  background-color: #94a3b8;
+}
+
+.back-btn:hover {
+  background-color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .upload { padding: 20px; }
+  .top h1 { font-size: 1.6rem; }
 }
