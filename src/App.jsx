@@ -94,7 +94,7 @@ function Planner({ globalData }) {
         Syllabus Text: ${globalData.syllabusText}
         Routine Text: ${globalData.routine}
         
-        Provide a structured weekly schedule, study techniques, and milestones.
+        Provide a structured weekly schedule in, study techniques, and milestones.
       `;
 
       const parts = [{ text: prompt }];
